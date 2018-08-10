@@ -1,0 +1,88 @@
+body {
+    background-color: #d7dbd6 !important;
+}
+
+.header-col {
+    background-color: #eeeeee;
+    padding: 10px 16px;
+    border-left: 1px solid #e0e0e0;
+}
+
+.color1 {
+    background-color: #ece6e0;
+}
+
+.color2 {
+    background-color: #009688;
+    color: #fff
+}
+
+.color3 {
+    background-color: #74e870;
+}
+
+.pd-none {
+    padding: 0px!important
+}
+
+.login-form {
+    margin-top: 3%;
+    padding: .4rem
+}
+
+.full {
+    width: 100%;
+}
+
+.outline {
+    border: 1px solid #e1dcdc;
+}
+
+.mt {
+    margin-top: 2%;
+}
+
+.background-body {
+    background-color: #009688;
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    top: 0
+}
+
+.users-list {
+    background-color: #fff;
+}
+
+.user-container {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.user-name {
+    border-bottom: 1px solid#ece6e0;
+}
+
+.userImg {
+    border-radius: 50%;
+    width: 40px;
+}
+
+.t-right {
+    text-align: right;
+}
+
+.icons svg {
+    margin: .4rem
+}
+
+.messages {
+    background-image: url('../../assets/img/background.png');
+    background-color: #e5ddd5;
+    opacity: 0.1;
+}
+
+.input-msg {
+    position: absolute;
+    bottom: 0px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenid@ - Entra o Regístrate</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./src/css/style.css" />
+    <link rel="stylesheet " href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css " integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO " crossorigin="anonymous ">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="row background-body">
+
+    </div>
+    <div class="container  mt ">
+        <div class="row">
+            <div class="col-12 col-md-7 mx-auto outline bg-white">
+                <div class="form-group login-form">
+                    <div class="form-group">
+                        <label for="txtEmail">Email address</label>
+                        <input id="txtEmail" type="email" class="form-control pd" placeholder="Email" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtPassword">Password</label>
+                        <input type="password" class="form-control" id="txtPassword" placeholder="Password">
+                    </div>
+                    <div class="row">
+                        <div class="col-6 col-md-6">
+                            <button type="submit" id="btnLogin" class="btn  inline  full  color2" onclick="loginWithFirebase()">Log in</button>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <button class="btn full color2" onclick="registerWithFirebase()">Registrarse</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 col-md-6">
+                            <button class="btn  full mt" onclick="facebookLoginwithFireBase()">
+                                <i class="fab fa-facebook-f"></i> Sign in facebook</button>
+                        </div>
+                        <div class="col-6 col-md-6">
+                            <button class="btn full mt" onclick="googleLoginwithFireBase()">
+                                <i class="fab fa-google"></i> Sign in google</button>
+                        </div>
+                    </div>
+
+                    <div id="message"></div>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!--Script-->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="./src/controllers/auth.js"></script>
+    <script>
+        window.onload = () => {
+            firebase.auth().onAuthStateChanged(user => {
+                if (user) {
+                    redirectFromLogin()
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
