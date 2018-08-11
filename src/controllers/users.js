@@ -5,11 +5,8 @@ window.controller.listUser = () =>{
     usersKeys.forEach(element => {
       let user = window.model.getUser(element)
       user.then((user)=>{
-        window.view.showUsers(user.val())
+        window.view.showUsers(user)
       })
     })
   })
-}
-window.controller.currentUser = () =>{
-  console.log(firebase.auth().currentUser)
 }

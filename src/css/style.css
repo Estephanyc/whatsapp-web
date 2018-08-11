@@ -76,13 +76,56 @@ body {
     margin: .4rem
 }
 
-.messages {
-    background-image: url('../../assets/img/background.png');
-    background-color: #e5ddd5;
-    opacity: 0.1;
+.input-msn {
+    background-color: #f6f2ee;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    bottom: 0;
+    position: absolute !important;
 }
 
-.input-msg {
-    position: absolute;
-    bottom: 0px;
+.input-msn input {
+    background-color: #fff;
+    border-radius: 1rem;
+    border: none;
+    margin-left: .9rem;
+    height: 40px;
+}
+
+.input-msn i {
+    font-size: 1.6rem;
+    color: #bec0bd;
+}
+
+#messagesContainer {
+    padding: 5rem;
+}
+
+.messages {
+    background-color: #e5ddd5;
+    background-image: url('../../assets/img/background2.png');
+}
+
+.message {
+    display: table;
+    margin: .5rem;
+    font-size: .9rem;
+    padding: .5rem;
+    border-radius: 7.5px;
+    box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
+}
+
+.remitent {
+    background-color: #ffffff;
+}
+
+.destination {
+    float: right;
+    background-color: #dcf8c6;
+}
+
+.time {
+    font-size: .6rem;
+    color: #767373;
+    margin-left: .6rem;
 }

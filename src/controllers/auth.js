@@ -14,12 +14,9 @@ window.onload = () => {
   firebase.auth().onAuthStateChanged(user => {
     if (user) {
       currentUser = firebase.auth().currentUser;
-      console.log(currentUser)
-      window.controller.currentUser(currentUser)
       window.controller.listUser()
       let user = window.model.getUser(currentUser.uid)
       user.then((element)=>{
-        console.log(element)
         window.view.showCurrentUser(element.val()) 
       })
     }

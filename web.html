@@ -32,7 +32,7 @@
                         <span onclick="logoutWithFireBase()"> logout</span>
                     </div>
                     <div class="col-8 header-col">
-                        hola
+                        <div id="idHeaderChat"></div>
                     </div>
                 </div>
             </header>
@@ -40,15 +40,16 @@
                 <div class="row">
                     <div class="col-4 users-list" id="usersList">
                     </div>
-                    <div class="col-8 color1 pd-none">
-                        <div class="messages">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="inputMsg" aria-describedby="emailHelp" placeholder="Enter email">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <div class="col-8 color1 pd-none messages">
+                        <div class="row">
+                            <div class="col-12" id="messagesContainer">
                             </div>
                         </div>
-
+                        <div class="col-12 input-msn">
+                            <i class="far fa-grin-alt"></i>
+                            <input type="text" class="col-10" id="inputMsn" placeholder="Escribe un mensaje aqui">
+                            <i class="fas fa-microphone"></i>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -60,9 +61,13 @@
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
     <script src="./src/controllers/auth.js"></script>
     <script src="./src/controllers/users.js"></script>
+    <script src="./src/controllers/messages.js"></script>
     <script src="./src/models/auth.js"></script>
     <script src="./src/models/users.js"></script>
+    <script src="./src/models/messages.js"></script>
     <script src="./src/views/users.js"></script>
+    <script src="./src/views/messages.js"></script>
+
 </body>
 
 </html>

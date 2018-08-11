@@ -4,15 +4,14 @@ console.log(user)
   userImg.innerHTML = `<img class="userImg" src="${user.photoUrl}">`
 }
 window.view.showUsers = (user) =>{
-  console.log(user)
   let render = '';
-  render +=`<div class="user-container">`
+  render +=`<div class="user-container" id="${user.key}" onclick="window.loadChat('${user.key}')">`
   render += `<div class="row">`
   render += `<div class="col-2">`
-  render += `<img class="userImg" src="${user.photoUrl}">`
+  render += `<img class="userImg" src="${user.val().photoUrl}">`
   render += `</div>`
   render += `<div class="col-10 user-name">`
-  render += `<span>${user.displayName}</span>`
+  render += `<span>${user.val().displayName}</span>`
   render += `</div>`
   render += `</div>`
   usersList.innerHTML += render;
