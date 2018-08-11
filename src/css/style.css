@@ -1,10 +1,31 @@
 body {
     background-color: #d7dbd6 !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+.background-body {
+    background-color: #009688;
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    z-index: -1;
+    top: 0
+}
+
+.container-web {
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    height: 90%;
+}
+
+.h-inherit {
+    height: inherit;
 }
 
 .header-col {
     background-color: #eeeeee;
-    padding: 10px 16px;
+    padding-top: .7rem;
+    padding-bottom: .6rem;
     border-left: 1px solid #e0e0e0;
 }
 
@@ -34,24 +55,14 @@ body {
     width: 100%;
 }
 
-.outline {
-    border: 1px solid #e1dcdc;
-}
-
 .mt {
     margin-top: 2%;
 }
 
-.background-body {
-    background-color: #009688;
-    position: absolute;
-    height: 30%;
-    width: 100%;
-    top: 0
-}
-
 .users-list {
     background-color: #fff;
+    border-bottom-left-radius: 3px;
+    height: 90%;
 }
 
 .user-container {
@@ -59,8 +70,15 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.user-container:hover {
+    cursor: pointer;
+    background-color: #e0e0e0;
+}
+
 .user-name {
     border-bottom: 1px solid#ece6e0;
+    font-size: .9rem;
+    font-weight: bold;
 }
 
 .userImg {
@@ -86,19 +104,33 @@ body {
 
 .input-msn input {
     background-color: #fff;
-    border-radius: 1rem;
+    border-radius: 2.3rem;
     border: none;
-    margin-left: .9rem;
     height: 40px;
 }
 
 .input-msn i {
     font-size: 1.6rem;
-    color: #bec0bd;
+    color: #a7a9a6;
+    padding-top: .5rem;
 }
 
 #messagesContainer {
-    padding: 5rem;
+    padding: 3rem;
+    overflow-y: auto;
+    height: 80%;
+}
+
+#messagesContainer::-webkit-scrollbar {
+    width: .4rem;
+}
+
+#messagesContainer::-webkit-scrollbar-track {
+    background: #d7dbd6;
+}
+
+#messagesContainer::-webkit-scrollbar-thumb {
+    background: #bec0bd;
 }
 
 .messages {
@@ -107,7 +139,8 @@ body {
 }
 
 .message {
-    display: table;
+    max-width: 65%;
+    word-wrap: break-word;
     margin: .5rem;
     font-size: .9rem;
     padding: .5rem;
@@ -116,6 +149,7 @@ body {
 }
 
 .remitent {
+    float: left;
     background-color: #ffffff;
 }
 

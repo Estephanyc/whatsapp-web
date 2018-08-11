@@ -5,11 +5,11 @@ window.loadChat = (id) => {
   destino = id
   remitente = currentUser.uid
   messagesContainer.innerHTML = ''
-  window.getMsn(destino , remitente).then((messages)=>{
-    Object.values(messages.val()).forEach(msn => {
-      window.showMsn(msn)
+  window.getMsn(destino, remitente).on('child_added', (msn) => {
+      msn = msn.val()
+      console.log(msn)
+      window.showMsn(msn) 
     });
-  })
 }
 
 inputMsn.addEventListener("change", function () {
@@ -18,8 +18,7 @@ inputMsn.addEventListener("change", function () {
 });
 
 window.userChatHeader =(id)=>{
-  window.model.getUser(id).then((user) =>{
-console.log(user.val())
+    window.model.getUser(id).then((user) =>{
     window.showHeaderChat(user.val())
   })
 }
