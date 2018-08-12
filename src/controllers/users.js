@@ -1,12 +1,7 @@
 window.controller = {}
-window.controller.listUser = () =>{
-  window.model.getUserList().then((users)=>{
-    let usersKeys = Object.keys(users.val())
-    usersKeys.forEach(element => {
-      let user = window.model.getUser(element)
-      user.then((user)=>{
-        window.view.showUsers(user)
-      })
-    })
-  })
+window.controller.listUsers = () =>{
+  window.model.getUserList().on('child_added', (user) => {
+    console.log(user.val())
+    window.view.showUsers(user)
+  });
 }

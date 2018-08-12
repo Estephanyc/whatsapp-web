@@ -13,9 +13,3 @@ window.showMsn =(msn)=>{
     }
     messagesContainer.innerHTML += render
 }
-window.showHeaderChat =(user)=>{
-    let render = ''
-    render += `<img class="userImg" src = "${user.photoUrl}" > `
-    render += `<span > ${ user.displayName }</span> `
-    idHeaderChat.innerHTML = render
-}

@@ -10,12 +10,6 @@ window.model.getUser = (uid) => {
         });
 }
 window.model.getUserList = () => {
-    return firebase.database().ref(`users/`)
-        .once('value')
-        .then((user) => {
-            return user
-        })
-        .catch((error) => {
-            console.log("Database error > " + JSON.stringify(error));
-        });
+    return firebase.database().ref('users')
+
 }

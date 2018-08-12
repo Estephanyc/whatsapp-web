@@ -6,7 +6,7 @@ body {
 .background-body {
     background-color: #009688;
     position: absolute;
-    height: 30%;
+    height: 8rem;
     width: 100%;
     z-index: -1;
     top: 0
@@ -24,13 +24,30 @@ body {
 
 .header-col {
     background-color: #eeeeee;
-    padding-top: .7rem;
-    padding-bottom: .6rem;
-    border-left: 1px solid #e0e0e0;
+    padding-top: .6rem;
+    padding-bottom: .5rem;
+}
+
+.header-chat-icons {
+    min-height: 40px;
+    display: inline-block;
+    float: right;
+}
+
+.header-chat-icons svg {
+    margin: .3rem .7rem;
+}
+
+#headerChat {
+    display: inline-block;
 }
 
 .color1 {
     background-color: #ece6e0;
+}
+
+.border-right {
+    border-right: 1px solid #e0e0e0;
 }
 
 .color2 {
@@ -63,22 +80,24 @@ body {
     background-color: #fff;
     border-bottom-left-radius: 3px;
     height: 90%;
+    overflow-y: auto;
 }
 
 .user-container {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    padding: .6rem 0;
+    border-bottom: 1px solid#ece6e0;
 }
 
 .user-container:hover {
     cursor: pointer;
-    background-color: #e0e0e0;
+    background-color: #f3f3f3
 }
 
 .user-name {
-    border-bottom: 1px solid#ece6e0;
     font-size: .9rem;
+    line-height: 2rem;
     font-weight: bold;
+    padding-left: .8rem
 }
 
 .userImg {
@@ -110,27 +129,39 @@ body {
 }
 
 .input-msn i {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #a7a9a6;
     padding-top: .5rem;
+}
+
+.search-box {
+    background-color: #fbfbfb;
+    border-bottom: 1px solid #dddcdc;
+    padding: .5rem;
+}
+
+.input-search {
+    font-size: .8rem;
+    background-color: #fff;
+    border: 1px solid #f6f6f6;
+    border-radius: .3rem;
+}
+
+.input-search input {
+    background-color: #fff;
+    border: none;
+    height: 30px;
+}
+
+.input-search i {
+    color: #d5d7d4;
+    padding-left: .9rem;
 }
 
 #messagesContainer {
     padding: 3rem;
     overflow-y: auto;
     height: 80%;
-}
-
-#messagesContainer::-webkit-scrollbar {
-    width: .4rem;
-}
-
-#messagesContainer::-webkit-scrollbar-track {
-    background: #d7dbd6;
-}
-
-#messagesContainer::-webkit-scrollbar-thumb {
-    background: #bec0bd;
 }
 
 .messages {
@@ -162,4 +193,16 @@ body {
     font-size: .6rem;
     color: #767373;
     margin-left: .6rem;
+}
+
+::-webkit-scrollbar {
+    width: .4rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #d7dbd6;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bec0bd;
 }
