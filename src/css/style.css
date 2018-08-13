@@ -79,8 +79,6 @@ body {
 .users-list {
     background-color: #fff;
     border-bottom-left-radius: 3px;
-    height: 90%;
-    overflow-y: auto;
 }
 
 .user-container {
@@ -137,7 +135,8 @@ body {
 .search-box {
     background-color: #fbfbfb;
     border-bottom: 1px solid #dddcdc;
-    padding: .5rem;
+    padding-top: .4rem;
+    padding-bottom: .9rem;
 }
 
 .input-search {
@@ -160,8 +159,6 @@ body {
 
 #messagesContainer {
     padding: 3rem;
-    overflow-y: auto;
-    height: 80%;
 }
 
 .messages {
@@ -193,6 +190,23 @@ body {
     font-size: .6rem;
     color: #767373;
     margin-left: .6rem;
+}
+
+.flex-d-c {
+    flex-direction: column;
+    height: 100%;
+    display: flex
+}
+
+.flex {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden
 }
 
 ::-webkit-scrollbar {
