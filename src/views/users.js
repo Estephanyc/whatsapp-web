@@ -15,6 +15,6 @@ window.view.showUsers = (user) =>{
 window.showHeaderChat = (user) => {
   let render = ''
   render += `<img class="userImg" src = "${user.photoUrl}" > `
-  render += `<span > ${user.displayName}</span> `
+  render += `<span class="user-name"> ${user.displayName}</span> `
   headerChat.innerHTML = render
 }

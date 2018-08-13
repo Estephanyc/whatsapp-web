@@ -5,7 +5,7 @@ window.addMsn = (remitente, destino, msn) =>{
     let hours = new Date().getHours()
     let minutes = new Date().getMinutes()
     let time = hours + ':' + minutes
-    firebase.database().ref(`post/${orderUnion}/${key}`).update({ message: msn , time: time, remitent: remitente, destino: destino});
+    return firebase.database().ref(`post/${orderUnion}/${key}`).update({ message: msn , time: time, remitent: remitente, destino: destino});
 }
 window.getMsn = (destino, remitente) =>{
     let union = remitente + destino
