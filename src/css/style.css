@@ -107,6 +107,10 @@ body {
     margin-top: 2%;
 }
 
+.margin {
+    margin: 1rem;
+}
+
 .users-list {
     background-color: #fff;
     border-bottom-left-radius: 3px;
@@ -204,21 +208,42 @@ body {
 .message {
     max-width: 65%;
     word-wrap: break-word;
-    margin: .5rem;
     font-size: .9rem;
     padding: .5rem;
-    border-radius: 7.5px;
     box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
 }
 
 .remitent {
     float: left;
     background-color: #ffffff;
+    border-radius: 0 7.5px 7.15px 7.15px;
 }
 
 .destination {
     float: right;
     background-color: #dcf8c6;
+    border-radius: 7.5px 0 7.15px 7.15px;
+}
+
+.destination-icon {
+    content: '';
+    position: absolute;
+    top: 0px;
+    width: 15px;
+    right: 3;
+    height: 19px;
+    background-image: url(../../assets/img/right.png);
+}
+
+.remitente-icon {
+    content: '';
+    position: absolute;
+    top: 0px;
+    width: 15px;
+    width: 18px;
+    left: -3;
+    height: 19px;
+    background-image: url(../../assets/img/left.png);
 }
 
 .time {
