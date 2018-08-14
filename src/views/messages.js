@@ -1,7 +1,4 @@
-let counter =0
 window.showMsn = (msn)=>{
-    counter ++
-    console.log(counter)
   let render = '';
   if (currentUser.uid === msn.remitent) {
     render = `<div class="row"> 

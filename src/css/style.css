@@ -150,9 +150,7 @@ body {
     background-color: #f6f2ee;
     padding-top: .5rem;
     padding-bottom: .5rem;
-    bottom: 0;
     text-align: center;
-    position: absolute !important;
 }
 
 .input-msn input {
@@ -197,7 +195,7 @@ body {
 }
 
 #messagesContainer {
-    padding: 3rem;
+    padding: 1rem 3rem;
 }
 
 .messages {
@@ -260,6 +258,10 @@ body {
 
 .flex-auto {
     flex: auto
+}
+
+.flex-none {
+    flex: none
 }
 
 .flex {
