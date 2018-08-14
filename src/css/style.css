@@ -3,6 +3,17 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.logo h3 {
+    color: #fff;
+    padding: .3rem
+}
+
+.logo img {
+    width: 50px;
+    margin: 0 .8rem;
+    float: left;
+}
+
 .background-body {
     background-color: #009688;
     position: absolute;
@@ -10,6 +21,11 @@ body {
     width: 100%;
     z-index: -1;
     top: 0
+}
+
+.background-body-login {
+    height: 13rem;
+    background-color: #5bbea5
 }
 
 .container-web {
@@ -26,6 +42,7 @@ body {
     background-color: #eeeeee;
     padding-top: .6rem;
     padding-bottom: .5rem;
+    flex: none;
 }
 
 .header-chat-icons {
@@ -65,7 +82,21 @@ body {
 
 .login-form {
     margin-top: 3%;
-    padding: .4rem
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19), 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+}
+
+.login-form label {
+    color: #55636B;
+    font-size: 1.5rem;
+    line-height: normal;
+    font-weight: 300;
+}
+
+.form-group {
+    margin-bottom: 2rem;
 }
 
 .full {
@@ -196,6 +227,10 @@ body {
     flex-direction: column;
     height: 100%;
     display: flex
+}
+
+.flex-auto {
+    flex: auto
 }
 
 .flex {

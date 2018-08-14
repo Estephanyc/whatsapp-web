@@ -6,8 +6,10 @@ window.loadChat = (id) => {
   remitente = currentUser.uid
   messagesContainer.innerHTML = ''
   window.getMsn(destino, remitente).on('child_added', (msn) => {
-      msn = msn.val() 
+    if(msn.key !== 'members'){
+      msn = msn.val()
       window.showMsn(msn) 
+    }
     });
 }
 

@@ -15,7 +15,7 @@ global.firebase = firebasemock.MockFirebaseSdk(
 require("../src/models/messages");
 
 describe(
-    "Modelo mensajes",// se empieza por lo general
+    "Modelo mensajes",
     () => {
         describe(
             "Me deberia permitir agregar un mensaje",
@@ -33,7 +33,7 @@ describe(
                             if(msn.message == 'hola mensaje de test'){
                                 mensaje = msn
                             }
-                            assert.exists(mensaje);//verifica que exista algo en particular en el código una función
+                            assert.exists(mensaje);
                             assert.equal(mensaje.message, "hola mensaje de test");
                             assert.equal(mensaje.destino, "86767e5e798");
                             assert.equal(mensaje.remitent, "9876600jhhy66");
